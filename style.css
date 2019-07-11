@@ -1,0 +1,59 @@
+p {
+color: white; font-family: Courier New;
+}
+
+h1 {
+color: white;  font-family: Courier New;
+}
+
+h2 {
+color: white;  font-family: Courier New;
+}
+
+h3 {
+color: white; font-family: Courier New;
+}
+
+h4 {
+color: #cbe71c; font-family: Courier New;
+}
+
+h5 {
+color: white; font-family: Courier New;
+}
+
+div {
+color: white
+}
+
+body {
+background-color: #171a29;
+}
+
+code {
+color: white
+}
+
+address {
+	color: white
+}
+
+button {
+width: 186.66px;
+padding: 14px;
+cursor: pointer; 
+float:left;
+display: inline-block;
+background-color: #171a29;
+border: none;
+color: white;
+}
+
+button:hover {
+  background: #222B53
+}
+
+.newspaper {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
