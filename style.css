@@ -57,3 +57,9 @@ button:hover {
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
+
+.barrafissa {
+position: fixed;
+bottom: 0;
+width: /* la lunghezza che desiderate, oppure semplicemente */ auto;
+height: /* l'altezza che più vi piace, oppure */ 20px;
