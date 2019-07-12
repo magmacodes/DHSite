@@ -1,1 +1,55 @@
 
+p {
+color: white; font-family: Courier New; font-size:12px;
+}
+
+h1 {
+color: white;  font-family: Courier New; font-size:15px;
+
+h2 {
+color: white;  font-family: Courier New;font-size:12px;
+
+h3 {
+color: white; font-family: Courier New;font-size:12px;
+
+h4 {
+color: #cbe71c; font-family: Courier New;font-size:12px;
+
+h5 {
+color: white; font-family: Courier New;font-size:12px;
+
+div {
+color: white; font-size:12px;
+}
+
+body {
+background-color: #171a29;
+}
+
+code {
+color: white
+}
+
+address {
+	color: white
+}
+
+button {
+width: 170px;
+padding: 12px;
+cursor: pointer; 
+float:left;
+display: inline-block;
+background-color: #171a29;
+border: none;
+color: white;
+}
+
+button:hover {
+  background: #222B53
+}
+
+.newspaper {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
