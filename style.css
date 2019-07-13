@@ -1,3 +1,4 @@
+@media only screen{
 p {
 color: white; font-family: Courier New;
 }
@@ -63,3 +64,4 @@ position: fixed;
 bottom: 0;
 width: /* la lunghezza che desiderate, oppure semplicemente */ auto;
 height: /* l'altezza che più vi piace, oppure */ 20px;
+} 
