@@ -265,26 +265,26 @@ function onlyTwo()
 function helpFile()
 {
   var content="KEY     FEATURES\n\n"+
-              "< - >     Rounds up or down to nearest integer\n"+
-              "<00>    Rounds up or down to 2 decimal places\n"+
-              "Num     Generates psuedo-random non-cryptograhic number\n"+
-              "M+        Adds single entry only to memory bin no.1\n"+
-              "MR       Recalls stored single item from memory bin no.1\n"+
-              "MC       Clears item from memory bin no.1\n"+
-              "M2+      Adds single entry only to memory bin no.2\n"+
-              "M2R     Recalls single item from memory bin no.2\n"+
-              "M2C     Clears item from memory bin no.2\n"+
-              "C          Clears all, except memory no.1 and memory no.2\n"+
-              "Clear    Resets all features to zero\n"+
-              "+-         Inverts value positive/negative of current display value       \n"+
-              "<-         Deletes last digit of current display\n"+
-              "X2        Returns value of current display to power 2\n"+
-              "X3        Returns value of current display to power 3\n"+
-              "%          Divides entry by 100 to return per centage\n"+
-              "Sqrt      Returns the square root of display value\n\n"+
-              "E1/2 Pi Ln2 Ln10    Return Mathematic constants\n\n"+
+              "< - >     Arrotonda per eccesso o per difetto all'intero pi√π vicino\n"+
+              "<00>    Arrotondare ai decimali\n"+
+              "Num     Genera numero non criptografico pseudo-casuale\n"+
+              "M+       Aggiunge una sola voce al contenitore di memoria n. 1\n"+
+              "MR       Richiama il singolo elemento memorizzato dal cestino n. 1\n"+
+              "MC       Cancella l'elemento dal cestino della memoria n. 1\n"+
+              "M2+      Aggiunge una sola voce al contenitore di memoria n. 2\n"+
+              "M2R     Richiama un singolo elemento dal contenitore di memoria n. 2\n"+
+              "M2C     Cancella l'elemento dal cestino della memoria n. 2\n"+
+              "C          Cancella l'ultimo dato inserito\n"+
+              "Clear    Cancella tutto\n"+
+              "+-         Inverte il valore positivo / negativo del valore corrente visualizzato\n"+
+              "<-         Elimina l'ultima cifra del display corrente\n"+
+              "X2        Restituisce il valore del display corrente alla potenza 2\n"+
+              "X3        Restituisce il valore del display corrente alla potenza 3\n"+
+              "%          Divide l'ingresso per 100 per restituire percentuale\n"+
+              "Sqrt      Restituisce la radice quadrata del valore visualizzato\n\n"+
+              "E1/2 Pi Ln2 Ln10    Restituisce costanti matematiche\n\n"+
               "Log Abs Atan Tan\n"+
-              "Acos Cos Asin Sin   Return Math calculation of display value:"
+              "Acos Cos Asin Sin   Restituisce il calcolo matematico del valore visualizzato:"
               
   alert(content);
 }
@@ -305,7 +305,7 @@ function helpFile()
 <INPUT NAME="display" TYPE=TEXT VALUE=0 SIZE=25>
 <INPUT NAME="stack" TYPE=HIDDEN VALUE=0></TD></TR>
  <TR>
-  <TD BGCOLOR=#FF0000><INPUT TYPE=BUTTON VALUE=" Help " onclick="helpFile();"></TD>
+  <TD BGCOLOR=#FF0000><INPUT TYPE=BUTTON VALUE=" Aiuto " onclick="helpFile();"></TD>
   <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE=" Num "  onclick="random()+addChar(display,mikesnum)+addChar(stack,mikesnum);"></TD>
   <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE=" <00> " onclick="onlyTwo();"></TD>
   <TD BGCOLOR=#008000><INPUT TYPE=BUTTON VALUE=" <-> "  onclick="round();"></TD>
@@ -315,8 +315,8 @@ function helpFile()
  </TR>
  <TR>
   <TD BGCOLOR=#FF0000><INPUT TYPE=BUTTON VALUE=" Clear" onclick="newSlate();"></TD>
-  <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE="   x ≥  " onclick="addChar(display.value)+cube();"></TD>
-  <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE="   x ≤  " onclick="addChar(display.value)+square();"></TD>
+  <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE="   x 3  " onclick="addChar(display.value)+cube();"></TD>
+  <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE="   x 2  " onclick="addChar(display.value)+square();"></TD>
   <TD BGCOLOR=#008000><INPUT TYPE=BUTTON VALUE="  %  " onclick="perCent();"></TD>
   <TD BGCOLOR=#800080><INPUT TYPE=BUTTON VALUE="  M+  " onclick="mem(1);"></TD>
   <TD BGCOLOR=#800080><INPUT TYPE=BUTTON VALUE=" MR  " onclick="mem(-1);"></TD>
@@ -326,16 +326,16 @@ function helpFile()
   <TD BGCOLOR=#000080><INPUT TYPE=BUTTON VALUE="    E     " onclick="wipe()+addChar(display,Math.E)+addChar(stack,Math.E);"></TD>
   <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE="  Exp  " onclick="addChar(display.value)+exp();"></TD>
   <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE=" Sqrt  " onclick="addChar(stack)+sqrt();"></TD>
-  <TD BGCOLOR=#008000><INPUT TYPE=BUTTON VALUE=" ˜  " onclick="addChar(stack,'/')+wipe()+addChar(display,'/');"></TD>
+  <TD BGCOLOR=#008000><INPUT TYPE=BUTTON VALUE=" √∑  " onclick="addChar(stack,'/')+wipe()+addChar(display,'/');"></TD>
   <TD BGCOLOR=#FFA500><INPUT TYPE=BUTTON VALUE="    7    " onclick="addChar(display,'7')+addChar(stack,'7');"></TD>
   <TD BGCOLOR=#FFA500><INPUT TYPE=BUTTON VALUE="    8    " onclick="addChar(display,'8')+addChar(stack,'8');"></TD>
   <TD BGCOLOR=#FFA500><INPUT TYPE=BUTTON VALUE="    9    " onclick="addChar(display,'9')+addChar(stack,'9');"></TD>
  </TR>
  <TR>
-  <TD BGCOLOR=#000080><INPUT TYPE=BUTTON VALUE="SqrtΩ" onclick="wipe()+addChar(display,Math.SQRT1_2)+addChar(stack,Math.SQRT1_2);"></TD>
+  <TD BGCOLOR=#000080><INPUT TYPE=BUTTON VALUE="Sqrt 1/2" onclick="wipe()+addChar(display,Math.SQRT1_2)+addChar(stack,Math.SQRT1_2);"></TD>
   <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE="  Log " onclick="addChar(display.value)+log();"></TD>
   <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE="  Abs " onclick="addChar(display.value)+abs();"></TD>
-  <TD BGCOLOR=#008000><INPUT TYPE=BUTTON VALUE="  ◊ " onclick="addChar(stack,'*')+wipe()+addChar(display,'*');"></TD>
+  <TD BGCOLOR=#008000><INPUT TYPE=BUTTON VALUE="  √ó " onclick="addChar(stack,'*')+wipe()+addChar(display,'*');"></TD>
   <TD BGCOLOR=#FFA500><INPUT TYPE=BUTTON VALUE="    4    " onclick="addChar(display,'4')+addChar(stack,'4');"></TD>
   <TD BGCOLOR=#FFA500><INPUT TYPE=BUTTON VALUE="    5    " onclick="addChar(display,'5')+addChar(stack,'5');"></TD>
   <TD BGCOLOR=#FFA500><INPUT TYPE=BUTTON VALUE="    6    " onclick="addChar(display,'6')+addChar(stack,'6');"></TD>
@@ -354,7 +354,7 @@ function helpFile()
   <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE="ACos" onclick="addChar(display.value)+acos();"></TD>
   <TD BGCOLOR=#0000FF><INPUT TYPE=BUTTON VALUE="  Cos " onclick="addChar(display.value)+cos();"></TD>
   <TD BGCOLOR=#008000><INPUT TYPE=BUTTON VALUE="   +   " onclick="addChar(stack,'+')+wipe()+addChar(display,'+');"></TD>
-  <TD BGCOLOR=#FFA500><INPUT TYPE=BUTTON VALUE="  ±  " onclick="changeSign(display)+changeSign(stack);"></TD>
+  <TD BGCOLOR=#FFA500><INPUT TYPE=BUTTON VALUE="  ¬±  " onclick="changeSign(display)+changeSign(stack);"></TD>
   <TD BGCOLOR=#FFA500><INPUT TYPE=BUTTON VALUE="     .    " onclick="addChar(display,'.')+addChar(stack,'.');"></TD>
   <TD BGCOLOR=#FFA500><INPUT TYPE=BUTTON VALUE="    0    " onclick="addChar(display,'0')+addChar(stack,'0');"></TD>
  </TR>
